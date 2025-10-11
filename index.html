@@ -13,39 +13,47 @@
     }
     *{box-sizing:border-box}
     html,body{height:100%}
-    html{background:linear-gradient(180deg, #fff7fb, #fff2fe); background-attachment: fixed;}
+    /* Fix gradient 'break' by painting on html and pinning */
+    html{background:linear-gradient(180deg, #fff7fb 0%, #fef6ff 50%, #f7fcff 100%); background-attachment:fixed;}
     body{margin:0; font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"; color:var(--text);} 
     a{color:var(--accent)} a:hover{opacity:.9}
+
     .wrap{display:grid; grid-template-columns:280px 1fr; gap:24px; max-width:1200px; margin:0 auto; padding:24px}
-    header{grid-column:1/-1; background:var(--panel); border:1px solid var(--border); border-radius:16px; padding:20px; position:relative; top:auto; z-index:1; box-shadow:0 6px 18px rgba(31,36,48,0.06);} 
+    header{grid-column:1/-1; background:var(--panel); border:1px solid var(--border); border-radius:16px; padding:20px; position:relative; z-index:1; box-shadow:0 6px 18px rgba(31,36,48,0.06);} 
     header h1{margin:0 0 6px; font-size:clamp(20px, 3vw, 28px)}
     header .meta{color:var(--muted); font-size:14px}
+
     nav{position:sticky; top:16px; align-self:start; background:var(--panel); border:1px solid var(--border); border-radius:16px; padding:16px; box-shadow:0 6px 18px rgba(31,36,48,0.06);} 
     nav h3{margin:4px 0 10px; font-size:14px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted)}
     .toc{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:6px}
     .toc a{display:block; padding:8px 10px; border-radius:10px; color:var(--text); text-decoration:none}
     .toc a.active, .toc a:hover{background:rgba(38,194,129,.12)}
+
     main{background:var(--panel); border:1px solid var(--border); border-radius:16px; padding:20px; box-shadow:0 6px 18px rgba(31,36,48,0.06);} 
     article.part{border:1px solid var(--border); border-radius:14px; padding:16px; margin-bottom:18px; background:#fffdfc;} 
     .badge{display:inline-flex; gap:8px; align-items:center; padding:6px 12px; border-radius:999px; font-size:12px; background:linear-gradient(90deg, rgba(46,230,161,.15), rgba(255,179,71,.15)); color:var(--muted); border:1px solid var(--border)} 
     .badge .dot{width:8px; height:8px; border-radius:50%}
     .dot.green{background:var(--green)} .dot.orange{background:var(--orange)} .dot.red{background:var(--red)}
+
     h2{margin:8px 0 8px; font-size:22px}
     h3{margin:14px 0 8px; font-size:18px}
     p{margin:8px 0}
+
     .grid{display:grid; gap:12px}
     .two{grid-template-columns:1fr 1fr}
     .cards{display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:12px}
     .card{border:1px solid var(--border); border-radius:12px; padding:12px; background:#ffffff} 
     .kv{display:grid; grid-template-columns:160px 1fr; gap:6px}
     .kv div:nth-child(odd){color:var(--muted)}
+
     .table{width:100%; border-collapse:collapse;}
     .table th,.table td{border:1px solid var(--border); padding:8px; text-align:left} 
     .table th{background:#f6f9ff} 
+
     details{border:1px solid var(--border); border-radius:10px; padding:10px; background:#fafcff} 
     details summary{cursor:pointer; font-weight:600}
+
     .videos a{display:block; padding:8px 10px; border:1px dashed var(--border); border-radius:10px; margin:6px 0; text-decoration:none} 
-    .small{font-size:13px; color:var(--muted)}
 
     html{scroll-behavior:smooth}
     [id]{scroll-margin-top: 12px;}
@@ -111,78 +119,78 @@
             <li><span class="dot red"></span> <strong>Red</strong> = not available or no socializing</li>
           </ul>
           <p>This color‑coded system provides an intuitive, at‑a‑glance understanding of availability without requiring verbal negotiation or app‑based communication.</p>
-        </section>
 
-        <section id="videos">
-          <h2>Demonstration Videos</h2>
-          <p>The videos below illustrate the interaction with and without NOORing.</p>
+          <p>To demonstrate this interaction, we filmed three different ways the same scenario can go. In the video without NOORing, there was misunderstanding of each other’s intentions and some comments were definitely misinterpreted as rudeness. In the other videos using the NOORing, we can clearly see that messages were clearly received and no one got offended.</p>
+          <p>The videos can be found using these links (they are uploaded on Google Drive with public access):</p>
           <div class="videos">
-            <a href="https://drive.google.com/file/d/1LyA4wgVn-Ve9fdG3IOFWipCnUx0ezq8k/view?usp=drive_link" target="_blank" rel="noopener">Video 1 – Baseline (without NOORing)</a>
-            <a href="https://drive.google.com/file/d/1tA5HFj5xoBAILCXCQoNgHl0Kyj5lXEh6/view?usp=drive_link" target="_blank" rel="noopener">Video 2 – With NOORing (Scenario A)</a>
-            <a href="https://drive.google.com/file/d/1DPGFFQJLImG8pY3o7dakrm4PeqrCZWoH/view?usp=drive_link" target="_blank" rel="noopener">Video 3 – With NOORing (Scenario B)</a>
+            <a href="https://drive.google.com/file/d/1DPGFFQJLImG8pY3o7dakrm4PeqrCZWoH/view?usp=drive_link" target="_blank" rel="noopener">Video 1</a>
+            <a href="https://drive.google.com/file/d/1tA5HFj5xoBAILCXCQoNgHl0Kyj5lXEh6/view?usp=drive_link" target="_blank" rel="noopener">Video 2</a>
+            <a href="https://drive.google.com/file/d/1LyA4wgVn-Ve9fdG3IOFWipCnUx0ezq8k/view?usp=drive_link" target="_blank" rel="noopener">Video 3</a>
           </div>
         </section>
 
         <section id="personas">
           <h2>Developing Personas</h2>
+          <p>From observations 1 and 4, we conclude that students often come back tired after class or labs, and being in a common space makes them feel pressured to socialize, even when they don’t want to. They avoid directness to not seem rude. We can notice a common pattern: students who need privacy and rest but feel guilty or misunderstood when setting boundaries.</p>
+          <p>From observation 2, we see that students under stress (especially before big exams) feel that their need for focus isn’t being respected. They already feel overwhelmed and hesitate to be blunt, so distractions continue. We can notice a common pattern: students who need to be productive but struggle to communicate urgency without offending.</p>
+          <p>From observation 3, we can identify students in a light‑work or relaxed mood who may welcome interaction, but others mistakenly assume they are busy. This leaves them feeling ignored. We can notice a common pattern: students who are socially open but whose openness goes unnoticed, leading to missed connections.</p>
+          <p>The above analysis helped us formulate 3 personas who will benefit from the NOORing coaster:</p>
           <div class="cards">
             <div class="card">
               <h3>Persona 1: Alex (20) – Engineering</h3>
-              <p>Lives with 3 roommates, often drained after long days. Values downtime but doesn’t want to seem rude.</p>
-              <p><em>How NOORing helps:</em> Quick, non‑verbal boundary setting without screens.</p>
+              <p>He lives in a dorm with 3 roommates. His challenging major often leaves him drained after long days of classes and assignments. He values downtime but doesn’t want to seem rude to his roommates.</p>
+              <p><em>Benefit:</em> NOORing allows roommates to understand his need for space without taking it personally.</p>
             </div>
             <div class="card">
               <h3>Persona 2: Henry (21) – Psychology</h3>
-              <p>Stress peaks before exams; needs focused time in common spaces without offending others.</p>
-              <p><em>How NOORing helps:</em> Calm, respectful focus signaling with simple taps.</p>
+              <p>He lives in a shared student housing with 2 other students. Anxiety spikes around exams and deadlines; he needs concentration in common spaces.</p>
+              <p><em>Benefit:</em> Calm, respectful way to signal focus and avoid distractions without confrontation.</p>
             </div>
             <div class="card">
               <h3>Persona 3: Stella (19) – Political Science</h3>
-              <p>Social and friendly; wants to connect without intruding or missing cues.</p>
-              <p><em>How NOORing helps:</em> Ambient signals visible across shared spaces.</p>
+              <p>She lives in a dorm with 2 roommates, loves bonding but fears intruding.</p>
+              <p><em>Benefit:</em> Subtle, non‑verbal cues about roommates’ availability so she can socialize confidently.</p>
             </div>
           </div>
         </section>
 
         <section id="scenario">
-          <h2>Use‑Case Scenario</h2>
-          <p><strong>Henry</strong> has a midterm in two days and chooses to work in the common study space. He brings his NOORing and sets his cup on it.</p>
+          <h2>Illustrating a Use‑Case Scenario</h2>
+          <p>Henry, a 21‑year‑old psychology student, has a midterm in two days. He chooses the common study space for a change of environment but needs to focus, so he brings NOORing.</p>
           <div class="cards">
             <div class="card">
               <h3>User Action</h3>
-              <p>Henry double‑taps the NOORing to switch the light to red.</p>
+              <p>Before starting, Henry taps the button twice to set the ring to <strong>red</strong> (not available).</p>
             </div>
             <div class="card">
               <h3>System Reaction</h3>
-              <p>The coaster glows softly in red. Roommates understand he is not available for conversation and avoid interrupting.</p>
+              <p>NOORing glows softly red; a roommate notices and refrains from interrupting.</p>
             </div>
             <div class="card">
-              <h3>Break & Switch</h3>
-              <p>After two hours, Henry taps once to turn the light green and takes a quick walk with a roommate.</p>
+              <h3>Break</h3>
+              <p>After two hours, Henry taps once to switch to <strong>green</strong>. A roommate invites him for a short walk; Henry accepts.</p>
             </div>
           </div>
-          <p>Result: No tension, clearer expectations, and productive study time with intentional breaks.</p>
+          <p>Outcome: reduced tension, preserved productivity, and better‑timed social breaks.</p>
         </section>
 
         <section id="related-products">
-          <h2>Related Products & Limitations</h2>
-          <p>We found drinkware that lights up or changes color for temperature, and screen/LED‑based novelty effects. These are not designed for boundary signaling.</p>
-          <p><strong>Moodsignal</strong> (laptop LED) requires website control. <strong>Luxafor</strong> targets offices and is expensive (~€149). These tools are separate objects, rely on apps or sites, and are less suited to casual roommate settings.</p>
-          <p>Student makeshift solutions (e.g., whiteboards) show the need but are not portable or habit‑forming. NOORing integrates signaling into an everyday object with minimal attention demand (calm technology).</p>
+          <h2>Finding Related Products</h2>
+          <p>Existing products use lighting/color in drinkware (e.g., temperature indication) or for visual effects/branding, but they don’t directly address mood signaling in shared living.</p>
+          <p><strong>Moodsignal</strong> (laptop‑attached LED) changes colors via a website. <strong>Luxafor</strong> targets corporate use and is expensive (~€149). These devices are separate objects, rely on apps/sites, and are less suited to casual roommate settings.</p>
+          <p>Students sometimes use makeshift tools (e.g., a desk whiteboard) to communicate availability, but these aren’t portable or habit‑forming and add mental load. NOORing integrates signaling into an everyday coaster, aligning with calm‑technology principles.</p>
         </section>
 
         <section id="comparisons">
-          <h2>Comparison for Target Personas</h2>
-          <ul>
-            <li><strong>Alex:</strong> NOORing avoids cognitive overhead; a quick tap communicates "need space" without screens.</li>
-            <li><strong>Henry:</strong> Portable across rooms; three clear states (green/orange/red) controlled instantly, no app navigation.</li>
-            <li><strong>Stella:</strong> Visible in shared areas even without laptops present; student‑friendly cost.</li>
-          </ul>
-          <p><em>Why NOORing wins:</em> portable, simple, affordable, and purpose‑built for boundary setting—not just aesthetics.</p>
+          <h2>Comparing the Products</h2>
+          <p><strong>Alex’s situation:</strong> Moodsignal adds cognitive burden when Alex is exhausted. NOORing is a quick tap, no screen required; it communicates intentional emotional states rather than decorative effects.</p>
+          <p><strong>Henry’s situation:</strong> Corporate devices like Luxafor are stationary; Henry moves between rooms. NOORing travels with him and provides three simple states (green/orange/red) without opening a website.</p>
+          <p><strong>Stella’s situation:</strong> Laptop LEDs aren’t visible in other rooms or when the laptop is closed. NOORing is visible across shared spaces and is student‑affordable (~$25–35 target).</p>
+          <p><em>Why NOORing wins:</em> portable, simple, affordable, and built for boundary setting—not just aesthetics.</p>
         </section>
 
         <section id="architecture">
-          <h2>High‑Level Design & Architecture</h2>
+          <h2>Designing at a High Level</h2>
           <table class="table">
             <thead>
               <tr><th>Component</th><th>Type</th><th>Specification</th><th>Status</th></tr>
@@ -191,40 +199,63 @@
               <tr><td>Microcontroller</td><td>Hardware</td><td>Arduino Nano 33 IoT or ESP32</td><td>Pre‑existing</td></tr>
               <tr><td>LED Ring</td><td>Hardware</td><td>Adafruit NeoPixel Ring (24 RGB LEDs)</td><td>Pre‑existing</td></tr>
               <tr><td>Touch Sensor</td><td>Hardware</td><td>Capacitive touch sensor breakout</td><td>Pre‑existing</td></tr>
-              <tr><td>Power Supply</td><td>Hardware</td><td>3.7V 2000mAh LiPo + USB‑C charging</td><td>Pre‑existing</td></tr>
-              <tr><td>Coaster Body</td><td>Hardware</td><td>3D‑printed PLA / laser‑cut acrylic (Ø100 mm)</td><td>To be developed</td></tr>
+              <tr><td>Power Supply</td><td>Hardware</td><td>3.7V 2000mAh LiPo battery + USB‑C charging module</td><td>Pre‑existing</td></tr>
+              <tr><td>Coaster Body</td><td>Hardware</td><td>3D‑printed PLA or laser‑cut acrylic (100 mm diameter)</td><td>To be developed</td></tr>
               <tr><td>State Manager</td><td>Software</td><td>Tracks mood states (Green/Orange/Red/Off)</td><td>To be developed</td></tr>
-              <tr><td>Touch Handler</td><td>Software</td><td>Detects 1/2/3‑tap patterns</td><td>To be developed</td></tr>
-              <tr><td>LED Controller</td><td>Software</td><td>Maps states to LED colors</td><td>To be developed</td></tr>
-              <tr><td>Power Manager</td><td>Software</td><td>Sleep mode + battery monitor</td><td>To be developed</td></tr>
+              <tr><td>Touch Handler</td><td>Software</td><td>Detects and counts taps (1/2/3 tap patterns)</td><td>To be developed</td></tr>
+              <tr><td>LED Controller</td><td>Software</td><td>Translates states to LED colors</td><td>To be developed</td></tr>
+              <tr><td>Power Manager</td><td>Software</td><td>Sleep mode and battery monitoring</td><td>To be developed</td></tr>
               <tr><td>Arduino IDE</td><td>Software</td><td>Development environment</td><td>Pre‑existing</td></tr>
-              <tr><td>NeoPixel Library</td><td>Software</td><td>Adafruit_NeoPixel</td><td>Pre‑existing</td></tr>
+              <tr><td>NeoPixel Library</td><td>Software</td><td>LED control library</td><td>Pre‑existing</td></tr>
             </tbody>
           </table>
           <h3>System Flow</h3>
-          <p>The user places a cup on NOORing and taps the capacitive sensor (1 tap = green; 2 = orange; 3 = red). The microcontroller counts taps (Touch Handler), updates the mood state (State Manager), and drives the LEDs (LED Controller). The Power Manager sleeps after 30 minutes of inactivity.</p>
+          <p>The user places their cup on NOORing and taps the capacitive sensor (1 = green/available, 2 = orange/moderate focus, 3 = red/do not disturb). The Arduino processes the tap count (Touch Handler), updates the mood state (State Manager), and triggers the LEDs (LED Controller). Power Manager sleeps after 30 minutes of inactivity.</p>
         </section>
 
         <section id="feasibility">
-          <h2>Feasibility & Work Plan</h2>
-          <h3>Team Experience</h3>
-          <div class="kv">
-            <div>Cyril</div><div>3D modelling/printing; Arduino builds (Robowars). Leads hardware.</div>
-            <div>Nicolas</div><div>Advanced coding; embedded FSMs. Leads firmware.</div>
-            <div>Lynn</div><div>ECSE 211; user testing; Gantt management. Leads evaluation/REB.</div>
-          </div>
-          <h3>Estimated Effort (per member)</h3>
+          <h2>Justifying Feasibility</h2>
+          <p>Our team can complete the NOORing prototype within the semester timeframe, with an estimated 24–28 hours per member.</p>
+          <h3>Team Member Experience</h3>
           <ul>
-            <li>Hardware assembly (8h): order, breadboard, solder & test.</li>
-            <li>Firmware (10h): FSM, tap detect, LED control, power mgmt.</li>
-            <li>Enclosure (4h): CAD + print/laser‑cut.</li>
-            <li>User testing (6h): recruit, sessions, interviews, iteration.</li>
+            <li><strong>Cyril:</strong> 3D modelling/printing and Arduino experience (Robowars at Concordia). Proficient in C++ and modeling design. Leads hardware integration.</li>
+            <li><strong>Nicolas:</strong> Advanced coding classes and Robowars participation. Proficient in state machines and embedded firmware. Leads software development.</li>
+            <li><strong>Lynn:</strong> ECSE 211; user testing protocols, documentation, and Gantt chart planning. Leads evaluation, recruitment, and REB compliance.</li>
           </ul>
-          <p><strong>Total:</strong> ~28 hours per member (within 20–30 hour guideline).</p>
+          <h3>Component‑by‑Component Breakdown</h3>
+          <h4>Hardware Assembly (8 hours/member)</h4>
+          <ul>
+            <li>Hours 1–2: Order/receive pre‑existing components (most available or ship within ~1 week).</li>
+            <li>Hours 3–5: Breadboard prototype: connect Arduino → NeoPixel ring, capacitive sensor, power system using Adafruit tutorials.</li>
+            <li>Hours 6–8: Solder final circuit on perfboard; test functionality.</li>
+            <li><em>Risk mitigation:</em> Well‑documented components; ESP32 as drop‑in if Nano unavailable.</li>
+          </ul>
+          <h4>Firmware Development (10 hours/member)</h4>
+          <ul>
+            <li>Hours 1–3: Implement three‑state FSM in Arduino IDE.</li>
+            <li>Hours 4–6: Tap detection using CapacitiveSensor examples.</li>
+            <li>Hours 7–9: Integrate Adafruit_NeoPixel; map colors (green/orange/red).</li>
+            <li>Hour 10: Add sleep after timeout.</li>
+            <li><em>Risk mitigation:</em> Libraries are documented; if capacitive sensing is noisy, swap to a simple button (~2h change).</li>
+          </ul>
+          <h4>Enclosure Design (4 hours/member)</h4>
+          <ul>
+            <li>Hours 1–2: CAD modeling in TinkerCAD: two‑piece coaster (base + top) with diffuser ring.</li>
+            <li>Hours 3–4: 3D print at makerspace or laser‑cut acrylic.</li>
+            <li><em>Risk mitigation:</em> If printing fails, switch to flat laser‑cut design (~1h redesign).</li>
+          </ul>
+          <h4>User Testing & Iteration (6 hours/member)</h4>
+          <ul>
+            <li>Hours 1–2: Recruit 6 participant pairs (REB‑approved protocol).</li>
+            <li>Hours 3–4: Usage sessions with 3 roommate pairs over 2 weeks.</li>
+            <li>Hours 5–6: Debrief interviews; tune LED brightness/colors.</li>
+            <li><em>Risk mitigation:</em> Standard HCI protocols; MVP test feasible with 3 pairs.</li>
+          </ul>
+          <p><strong>Total Estimated Time:</strong> 28 hours/member (within 20–30h guideline). <strong>Feasibility Confidence:</strong> HIGH — no advanced fabrication; ~300 lines of C++ using documented libs.</p>
         </section>
 
         <section id="reb">
-          <h2>REB Form</h2>
+          <h2>REB Form Submission</h2>
           <table class="table">
             <colgroup>
               <col style="width:260px">
@@ -232,12 +263,12 @@
             </colgroup>
             <tbody>
               <tr>
-                <th>Group / Student names</th>
+                <th>Group/Student names</th>
                 <td>
                   <strong>Group E</strong><br>
-                  Cyril El‑Feghali — ID: 261010517<br>
-                  Lynn Haddad — ID: 261005938<br>
-                  Nicolas El‑Murr — ID: 261030852
+                  Cyril El‑Feghali – ID: 261010517<br>
+                  Lynn Haddad – ID: 261005938<br>
+                  Nicolas El‑Murr – ID: 261030852
                 </td>
               </tr>
               <tr>
@@ -250,36 +281,44 @@
               </tr>
               <tr>
                 <th>Number and Type of Participants</th>
-                <td>6–12 university students (ages 18–25, all genders) currently living in shared housing with 1–3 roommates. Participants must regularly use common spaces (kitchen, living room, or study areas) for daily activities. Recruitment targets a minimum of 3 roommate pairs (6 individuals total) to ensure adequate data across diverse living situations. Participants should have no prior exposure to mood‑signaling devices.</td>
+                <td>6–12 university students (ages 18–25, all genders) currently living in shared housing with 1–3 roommates. Participants must regularly use common spaces (kitchen, living room, or study areas) for daily activities. Recruitment targets a minimum of 3 roommate pairs (6 individuals total) to ensure adequate data collection across diverse living situations. Participants should have no prior exposure to mood‑signaling devices to ensure unbiased feedback.</td>
               </tr>
               <tr>
                 <th>How and from where are they recruited</th>
-                <td>In‑class announcements; student housing group chats; personal contacts (family, friends). Recruitment materials emphasize voluntary participation and time commitment (30‑minute briefing, 7‑day usage requiring no active effort, and 30‑minute debrief interview). Participants may withdraw at any time without penalty. Interested students complete a brief screening questionnaire to confirm eligibility.</td>
+                <td>
+                  Recruitment occurs via:
+                  <ul>
+                    <li>In‑class announcements</li>
+                    <li>Student housing group chats</li>
+                    <li>Personal contacts (family, friends)</li>
+                  </ul>
+                  Materials emphasize voluntary participation and time commitment (30‑minute briefing; 7‑day usage with no active effort; 30‑minute debrief). Participants may withdraw anytime without penalty. Interested students complete a brief screening questionnaire to confirm eligibility.
+                </td>
               </tr>
               <tr>
                 <th>What risk could this study entail for participants?</th>
                 <td>
                   <strong>Minimal Psychological Risks:</strong>
                   <ul>
-                    <li>Discomfort with explicit signaling (e.g., using the red light may feel antisocial).</li>
-                    <li>Interpersonal tension if the “do not disturb” state is used frequently.</li>
+                    <li>Discomfort explicitly signaling unavailability (red light may feel antisocial or rude).</li>
+                    <li>Interpersonal tension if the red state is used frequently, leading to feelings of rejection.</li>
                     <li>Social pressure to use the device or to respect signals perceived as rigid.</li>
-                    <li>Minor research‑related anxiety about being observed/evaluated.</li>
+                    <li>Research‑related anxiety from being observed/evaluated.</li>
                   </ul>
-                  <strong>No Physical Risks:</strong> Device operates on low voltage (3.7–5V), safety‑certified components, no exposed electrical elements.
+                  <strong>No Physical Risks:</strong> Device operates at low voltage (3.7–5V) with safety‑certified components and no exposed electrical elements.
                 </td>
               </tr>
               <tr>
                 <th>How can these risks be mitigated?</th>
                 <td>
                   <ul>
-                    <li><strong>Pre‑Study Briefing (30 min):</strong> Frame NOORing as a communication aid, not a replacement for conversation. Encourage participants to introduce it to roommates.</li>
-                    <li><strong>Informed Consent & Withdrawal:</strong> Emphasize voluntary participation and the unconditional right to withdraw at any time without penalty or impact on academic standing.</li>
-                    <li><strong>Mid‑Study Check‑In:</strong> Day‑3 text check‑in to monitor for tension, discomfort, or technical issues.</li>
-                    <li><strong>Post‑Study Debrief:</strong> 30‑minute semi‑structured interview to capture negative/positive experiences and suggestions.</li>
-                    <li><strong>Technical Reliability:</strong> 48‑hour stress‑testing of devices prior to deployment.</li>
-                    <li><strong>Data Protection & Anonymity:</strong> Anonymize all collected data; no personally identifiable information appears in reports/presentations.</li>
-                    <li><strong>Roommate Inclusivity:</strong> Encourage briefing of roommates even if only one member participates formally.</li>
+                    <li><strong>Comprehensive Pre‑Study Briefing (30 min):</strong> Position NOORing as a facilitator of communication; encourage participants to explain its purpose to roommates.</li>
+                    <li><strong>Informed Consent & Withdrawal Rights:</strong> Emphasize voluntary participation and unconditional right to withdraw at any stage without penalty or academic impact.</li>
+                    <li><strong>Mid‑Study Check‑In Protocol:</strong> Brief text‑based check‑ins on day 3 to monitor tension, discomfort, or technical issues.</li>
+                    <li><strong>Post‑Study Debriefing Session:</strong> 30‑minute semi‑structured interview for candid feedback.</li>
+                    <li><strong>Technical Reliability Testing:</strong> 48‑hour stress testing of all devices before deployment.</li>
+                    <li><strong>Data Protection & Anonymity:</strong> Anonymize all collected data; exclude personally identifiable information from presentations.</li>
+                    <li><strong>Roommate Inclusivity:</strong> Encourage briefing of roommates about the study’s nature even if only one roommate participates formally.</li>
                   </ul>
                 </td>
               </tr>
@@ -314,9 +353,9 @@
         const content = document.getElementById('content');
         if (!toc || !content) return;
 
-        // Build sidebar TOC
+        // Build sidebar TOC (articles + their sections)
         const parts = Array.from(content.querySelectorAll('article.part'));
-        const linkMap = new Map();
+        const links = [];
         parts.forEach(part => {
           const partTitle = part.getAttribute('data-title') || part.id;
           const liPart = document.createElement('li');
@@ -325,9 +364,9 @@
           aPart.textContent = partTitle;
           liPart.appendChild(aPart);
           toc.appendChild(liPart);
-          linkMap.set(part.id, aPart);
+          links.push(aPart);
 
-          const sections = Array.from(part.querySelectorAll('section'));
+          const sections = Array.from(part.querySelectorAll(':scope > section'));
           sections.forEach(sec => {
             const li = document.createElement('li');
             li.style.marginLeft = '12px';
@@ -337,13 +376,12 @@
             a.textContent = h2 ? h2.textContent : sec.id;
             li.appendChild(a);
             toc.appendChild(li);
-            linkMap.set(sec.id, a);
+            links.push(a);
           });
         });
 
-        // Robust scroll spy — pick the section closest to top
-        const anchors = Array.from(content.querySelectorAll('article.part, article.part section'));
-        const links = Array.from(toc.querySelectorAll('a'));
+        // Scroll spy — choose element whose top is closest to 96px from viewport top
+        const anchors = Array.from(content.querySelectorAll('article.part, article.part > section'));
         const setActive = (id) => {
           links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === `#${id}`));
         };
@@ -353,8 +391,9 @@
           let best = Infinity;
           for (const el of anchors){
             const r = el.getBoundingClientRect();
-            const d = Math.abs(r.top - 80); // 80px from top as target line
-            if (r.bottom > 80 && d < best){ winner = el; best = d; }
+            if (r.bottom <= 96) continue; // ignore scrolled past
+            const d = Math.abs(r.top - 96);
+            if (d < best){ winner = el; best = d; }
           }
           if (winner) setActive(winner.id);
         };
@@ -370,13 +409,13 @@
         window.addEventListener('resize', onScroll);
         pickCurrent();
 
-        // Highlight immediately when clicking TOC links
+        // Immediate highlight on click
         toc.addEventListener('click', (e) => {
           const a = e.target.closest('a[href^="#"]');
           if (!a) return;
           setActive(a.getAttribute('href').slice(1));
         });
-      } catch(e){ /* no-op for preview */ }
+      } catch(e){ /* silent fail in preview */ }
     })();
   </script>
 </body>
