@@ -13,7 +13,8 @@
     }
     *{box-sizing:border-box}
     html,body{height:100%}
-    body{margin:0; font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"; color:var(--text); background:linear-gradient(180deg, #fff7fb, #fff2fe);} 
+    html{background:linear-gradient(180deg, #fff7fb, #fff2fe); background-attachment: fixed;}
+    body{margin:0; font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"; color:var(--text);} 
     a{color:var(--accent)} a:hover{opacity:.9}
     .wrap{display:grid; grid-template-columns:280px 1fr; gap:24px; max-width:1200px; margin:0 auto; padding:24px}
     header{grid-column:1/-1; background:var(--panel); border:1px solid var(--border); border-radius:16px; padding:20px; position:relative; top:auto; z-index:1; box-shadow:0 6px 18px rgba(31,36,48,0.06);} 
@@ -46,6 +47,9 @@
     .videos a{display:block; padding:8px 10px; border:1px dashed var(--border); border-radius:10px; margin:6px 0; text-decoration:none} 
     .small{font-size:13px; color:var(--muted)}
 
+    html{scroll-behavior:smooth}
+    [id]{scroll-margin-top: 12px;}
+
     @media (max-width:900px){
       .wrap{grid-template-columns:1fr;}
       nav{position:relative; top:0}
@@ -60,7 +64,6 @@
       <div class="meta">
         <strong>Deliverable Updates</strong> · Group E &nbsp;|&nbsp; Cyril El Feghali &nbsp;|&nbsp; Lynn Haddad &nbsp;|&nbsp; Nicolas El Murr
       </div>
-      <div class="small" style="margin-top:6px">This page is designed so you can append new parts over time. Use the comment near the bottom of the file as a copy‑paste template for future updates.</div>
     </header>
 
     <nav>
@@ -222,20 +225,20 @@
         </section>
 
         <section id="reb">
-          <h2>REB Form Summary</h2>
+          <h2>REB Form</h2>
           <table class="table">
             <colgroup>
-              <col style="width:240px">
+              <col style="width:260px">
               <col>
             </colgroup>
             <tbody>
               <tr>
-                <th>Group / Student Names</th>
+                <th>Group / Student names</th>
                 <td>
                   <strong>Group E</strong><br>
-                  Cyril El‑Feghali – ID: 261010517<br>
-                  Lynn Haddad – ID: 261005938<br>
-                  Nicolas El‑Murr – ID: 261030852
+                  Cyril El‑Feghali — ID: 261010517<br>
+                  Lynn Haddad — ID: 261005938<br>
+                  Nicolas El‑Murr — ID: 261030852
                 </td>
               </tr>
               <tr>
@@ -248,24 +251,37 @@
               </tr>
               <tr>
                 <th>Number and Type of Participants</th>
-                <td>6–12 university students (ages 18–25, all genders) currently living in shared housing with 1–3 roommates. Participants must regularly use common spaces (kitchen, living room, or study areas) for daily activities. Recruitment targets a minimum of 3 roommate pairs (6 individuals total). Participants should have no prior exposure to mood‑signaling devices.</td>
+                <td>6–12 university students (ages 18–25, all genders) currently living in shared housing with 1–3 roommates. Participants must regularly use common spaces (kitchen, living room, or study areas) for daily activities. Recruitment targets a minimum of 3 roommate pairs (6 individuals total) to ensure adequate data across diverse living situations. Participants should have no prior exposure to mood‑signaling devices.</td>
               </tr>
               <tr>
-                <th>How and From Where Are They Recruited</th>
+                <th>How and from where are they recruited</th>
+                <td>In‑class announcements; student housing group chats; personal contacts (family, friends). Recruitment materials emphasize voluntary participation and time commitment (30‑minute briefing, 7‑day usage requiring no active effort, and 30‑minute debrief interview). Participants may withdraw at any time without penalty. Interested students complete a brief screening questionnaire to confirm eligibility.</td>
+              </tr>
+              <tr>
+                <th>What risk could this study entail for participants?</th>
                 <td>
-                  In‑class announcements; student housing group chats; personal contacts (family, friends). Recruitment materials emphasize voluntary participation and estimated time commitment (30‑minute briefing, 7‑day usage with no active effort, and 30‑minute debrief). Participants may withdraw at any time without penalty. Interested students complete a brief screening questionnaire to confirm eligibility.
+                  <strong>Minimal Psychological Risks:</strong>
+                  <ul>
+                    <li>Discomfort with explicit signaling (e.g., using the red light may feel antisocial).</li>
+                    <li>Interpersonal tension if the “do not disturb” state is used frequently.</li>
+                    <li>Social pressure to use the device or to respect signals perceived as rigid.</li>
+                    <li>Minor research‑related anxiety about being observed/evaluated.</li>
+                  </ul>
+                  <strong>No Physical Risks:</strong> Device operates on low voltage (3.7–5V), safety‑certified components, no exposed electrical elements.
                 </td>
               </tr>
               <tr>
-                <th>Risks to Participants</th>
+                <th>How can these risks be mitigated?</th>
                 <td>
-                  <strong>Minimal psychological risks:</strong> potential discomfort signaling unavailability; interpersonal tension if red state is used frequently; social pressure to use the device; mild research‑related anxiety. <strong>No physical risks:</strong> low‑voltage device (3.7–5V) using safety‑certified components with no exposed electrical elements.
-                </td>
-              </tr>
-              <tr>
-                <th>Risk Mitigation</th>
-                <td>
-                  30‑minute pre‑study briefing (position device as communication aid); informed consent & unconditional withdrawal rights; day‑3 text check‑in; post‑study debrief interview; 48‑hour device reliability test before deployment; anonymization of all collected data; encourage briefing of roommates for inclusivity.
+                  <ul>
+                    <li><strong>Pre‑Study Briefing (30 min):</strong> Frame NOORing as a communication aid, not a replacement for conversation. Encourage participants to introduce it to roommates.</li>
+                    <li><strong>Informed Consent & Withdrawal:</strong> Emphasize voluntary participation and the unconditional right to withdraw at any time without penalty or impact on academic standing.</li>
+                    <li><strong>Mid‑Study Check‑In:</strong> Day‑3 text check‑in to monitor for tension, discomfort, or technical issues.</li>
+                    <li><strong>Post‑Study Debrief:</strong> 30‑minute semi‑structured interview to capture negative/positive experiences and suggestions.</li>
+                    <li><strong>Technical Reliability:</strong> 48‑hour stress‑testing of devices prior to deployment.</li>
+                    <li><strong>Data Protection & Anonymity:</strong> Anonymize all collected data; no personally identifiable information appears in reports/presentations.</li>
+                    <li><strong>Roommate Inclusivity:</strong> Encourage briefing of roommates even if only one member participates formally.</li>
+                  </ul>
                 </td>
               </tr>
             </tbody>
@@ -297,10 +313,11 @@
       try{
         const toc = document.getElementById('toc');
         const content = document.getElementById('content');
-        if (!toc || !content) return; // graceful if layout hasn't loaded yet
+        if (!toc || !content) return;
 
-        // Build sidebar TOC from articles/sections
+        // Build sidebar TOC
         const parts = Array.from(content.querySelectorAll('article.part'));
+        const linkMap = new Map();
         parts.forEach(part => {
           const partTitle = part.getAttribute('data-title') || part.id;
           const liPart = document.createElement('li');
@@ -309,6 +326,7 @@
           aPart.textContent = partTitle;
           liPart.appendChild(aPart);
           toc.appendChild(liPart);
+          linkMap.set(part.id, aPart);
 
           const sections = Array.from(part.querySelectorAll('section'));
           sections.forEach(sec => {
@@ -320,28 +338,46 @@
             a.textContent = h2 ? h2.textContent : sec.id;
             li.appendChild(a);
             toc.appendChild(li);
+            linkMap.set(sec.id, a);
           });
         });
 
-        // Scroll spy with safe fallback
-        const links = Array.from(toc.querySelectorAll('a'));
-        const setActive = (id) => links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === `#${id}`));
+        // Robust scroll spy — pick the section closest to top
         const anchors = Array.from(content.querySelectorAll('article.part, article.part section'));
+        const links = Array.from(toc.querySelectorAll('a'));
+        const setActive = (id) => {
+          links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === `#${id}`));
+        };
 
-        if ('IntersectionObserver' in window){
-          const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => { if (entry.isIntersecting) setActive(entry.target.id); });
-          }, {rootMargin: '0px 0px -70% 0px', threshold: 0.1});
-          anchors.forEach(a => observer.observe(a));
-        } else {
-          // fallback: update on scroll
-          window.addEventListener('scroll', () => {
-            let current = anchors[0];
-            for (const a of anchors){ if (a.getBoundingClientRect().top <= 80) current = a; }
-            if (current) setActive(current.id);
-          });
-        }
-      } catch(e){ /* fail silent for preview environments */ }
+        const pickCurrent = () => {
+          let winner = anchors[0];
+          let best = Infinity;
+          for (const el of anchors){
+            const r = el.getBoundingClientRect();
+            const d = Math.abs(r.top - 80); // 80px from top as target line
+            if (r.bottom > 80 && d < best){ winner = el; best = d; }
+          }
+          if (winner) setActive(winner.id);
+        };
+
+        let ticking = false;
+        const onScroll = () => {
+          if (!ticking){
+            window.requestAnimationFrame(() => { pickCurrent(); ticking = false; });
+            ticking = true;
+          }
+        };
+        document.addEventListener('scroll', onScroll, {passive:true});
+        window.addEventListener('resize', onScroll);
+        pickCurrent();
+
+        // Highlight immediately when clicking TOC links
+        toc.addEventListener('click', (e) => {
+          const a = e.target.closest('a[href^="#"]');
+          if (!a) return;
+          setActive(a.getAttribute('href').slice(1));
+        });
+      } catch(e){ /* no-op for preview */ }
     })();
   </script>
 </body>
